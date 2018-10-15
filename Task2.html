@@ -1,14 +1,25 @@
-<script>
-    const percent = 0.02;
-    let money = 1000;
-    let array = [];
-    for (let i = 0; i <= 12; i++){
-        if (i >= 3){
-            array[2 * i] = money * Math.pow((1 + percent), i);
-        }
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>HTML5</title>
+ </head>
+ <body>
+    <script>
+        const percent = 1.02;
+        let money = 1000;
+        let array = [];
+        for (let i = 0; i <= 12; i++){
+            array[2 * i] = money * Math.pow(percent, i);
+            array[2 * i + 1] = array[2 * i] - money;
+            if (i >= 3){
+                alert("Сумма вклада за "+i+" месяц: "+array[2 * i].toFixed(2));
+            }
 
-        if (i <= 10){
-            array[2 * i + 1] = percent * array[2 * i];
+            if (i <= 10){
+                alert("Прирост суммы вклада за "+i+" месяц: "+array[2 * i + 1].toFixed(2));
+            }
         }
-    }
-</script>
+    </script>
+ </body>
+</html>
