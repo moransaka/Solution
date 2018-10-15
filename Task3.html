@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Task3</title>
+ </head>
+ <body>
+    <script>
+        function getNumbersSum(i){
+            return i.toString().split('').reduce(function(a, b) {
+                return +a + +b;
+            })
+        }
+
+        let n = parseInt(prompt());
+
+        for (let i = 100; i <= 999; i++){
+            if (getNumbersSum(i) == n) alert(i);
+        }
+    </script>
+ </body>
+</html>   
