@@ -6,19 +6,15 @@
  </head>
  <body>
     <script>
-        let n = prompt();
-        let а = prompt();
-        let b = prompt();
-        let ai = false, bi = false;
-        let str = n.split('');
-        for (let index of str){
-            console.log(index);
-            if (index == a) ai = true;
-            if (index == b) bi = true;
-            if (ai && bi) break;
-        }
-        if (ai) alert("a присутствует в числе n");
-        if (bi) alert("b присутствует в числе n");
+		let str = prompt("Введите базовое число");
+		let char = prompt("Какое число удалить?");
+		
+		/*
+		 * Параметр 'g' (global) в конструкторе RegExp указывает,
+		 * что нужно искать все совпадения в строке,
+		 * а не олько первое
+		 */
+		conslole.log(str.replace(new RegExp(char, 'g'), ''));
     </script>
  </body>
 </html>   
