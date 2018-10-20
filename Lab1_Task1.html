@@ -7,9 +7,9 @@
  <body>
     <script>
         let res = 1;
-        for (let i = 0; i <=5; i++){
+        for (let i = 0; i <5; i++){
             let number = parseInt(prompt());
-            if (!(number % 3) || !(number % 7)){
+            if ((number % 3) == 0 || (number % 7 == 0){
                  res *= number;
             }
         }

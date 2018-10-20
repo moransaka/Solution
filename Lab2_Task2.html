@@ -8,12 +8,6 @@
     <script>
 		let str = prompt("Введите базовое число");
 		let char = prompt("Какое число удалить?");
-		
-		/*
-		 * Параметр 'g' (global) в конструкторе RegExp указывает,
-		 * что нужно искать все совпадения в строке,
-		 * а не олько первое
-		 */
 		alert(str.replace(new RegExp(char, 'g'), ''));
     </script>
  </body>
