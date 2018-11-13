@@ -1,0 +1,25 @@
+<!-- В одномерном целочисленном массиве x[1]…x[n+m],
+рассматриваемом как соединение двух его отрезков:
+начала x[1]…x[n] длины n и конца x[n]… [n+m] длины m,
+переставить местами начало и конец, не используя
+дополнительных массивов.   -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Task2</title>
+ </head>
+ <body>
+    <script>
+		  let array = ['q','w','e','r','t','y','u','i','o','p'];
+      let n = 4, m = 6;
+      for (let i = 0; i <= (n-1); i++){
+        array.push(array[i]);
+      }
+      array.splice(0,n);
+      console.log(array);
+    </script>
+ </body>
+</html>   
+
+
