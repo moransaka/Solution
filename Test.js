@@ -1,9 +1,7 @@
-let array = [0,1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1];
-let n = 10, m = 19;
-let lengthFirst = n + 1;
-let lengthSecond = m - n;
-console.log(lengthFirst, lengthSecond);
-console.log(array);
-for (let i = 0; i <= n; i++){
-    array[m + i] = array[i];
+let array = ['q','w','e','r','t','y','u','i','o','p'];
+let n = 4, m = 6;
+for (let i = 0; i <= (n-1); i++){
+    array.push(array[i]);
 }
+array.splice(0,n);
+console.log(array);
