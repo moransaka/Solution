@@ -1,9 +1,39 @@
-let array = [0,1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1];
-let n = 10, m = 19;
-let lengthFirst = n + 1;
-let lengthSecond = m - n;
-console.log(lengthFirst, lengthSecond);
-console.log(array);
-for (let i = 0; i <= n; i++){
-    array[m + i] = array[i];
+function twins (x,y,k,m){
+    var n=[], s=[], t=0, j=0;
+    k=+prompt("Введите длину массива x:");
+    m=+prompt("Введите длину массива y: ");
+    for (i=0; i<k; i++){
+        x = +prompt("Введите число x:");
+        n.push(x);
+    }
+
+    for (i=0; i<m; i++){
+        y =+prompt("Введите число y:");
+        s.push(y);
+    }
+
+    if (s.length > n.length){
+        for(i=0; i<s.length; i++){
+            if(n[j] == s[i]) t++;
+                
+            if(i==s.length){
+                j=j+1;
+                i=0;
+            }
+        }
+    }
+
+    if (s.length < n.length){
+        for(i=0; i<n.length; i++){
+            if(n[i] == s[j]){
+            t++;
+                if(i==n.length){
+                    j=j+1;
+                    i=0;
+                }
+            }
+        }
+    }
+    return alert(s + " " + n + " " + t);
 }
+    twins();

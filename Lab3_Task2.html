@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Task2</title>
+ </head>
+ <body>
+    <script>
+		let arab = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        let roman = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+        let number = parseInt(prompt("Введите число"));
+        alert(translate(number));
+
+        function translate(num){
+	    let res = '';
+	    let i = 0;
+	    while (num){
+		    if (num >= arab[i]){
+		    	num -= arab[i];
+		    	res += roman[i];
+		    }
+		    else i++;
+	    }
+	    return res;
+        }
+    </script>
+ </body>
+</html>   

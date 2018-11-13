@@ -3,8 +3,23 @@
 начала x[1]…x[n] длины n и конца x[n]… [n+m] длины m,
 переставить местами начало и конец, не используя
 дополнительных массивов.   -->
-<script>
-    let array = [0,1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1];
-    let n = 10, m = 19;
-    console.log(...array);
-</script>
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Task2</title>
+ </head>
+ <body>
+    <script>
+		  let array = ['q','w','e','r','t','y','u','i','o','p'];
+      let n = 4, m = 6;
+      for (let i = 0; i <= (n-1); i++){
+        array.push(array[i]);
+      }
+      array.splice(0,n);
+      console.log(array);
+    </script>
+ </body>
+</html>   
+
+
