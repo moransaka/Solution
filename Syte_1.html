@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Генератор фраз</title>
+        <style>
+            body{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 5%;  
+            }
+        </style>
+        <script>
+            function makePhrases() {
+                let words1 = ["Skoda", "Lexus", "Nissan", "Toyota", "Mazda", " ПЗПІ-18-11", "КН", "Яцко"];
+                let words2 = ["Как ты смел", "Управляй мечтой", "Превосходя ожидания", "Стремление к совершенству"];
+                
+                let rand1 = Math.floor(Math.random() * words1.length);
+                let rand2 = Math.floor(Math.random() * words2.length);
+                
+                let phrase = "<b>" + words1[rand1] + "</b>" + " : " + words2[rand2] + "!";
+                let phraseElement = document.getElementById("phrase");
+                phraseElement.innerHTML = phrase;
+            }
+
+            function paintPhrases() {
+                let p = document.getElementsByTagName("b")[0];
+                color = Math.floor(Math.random() * 359);
+                p.style.color = "hsl(" + color + ",100%,50%)";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Генератор фраз сообщает:</h1>
+        <p id="phrase">Hi</p>
+        <form>
+            <input type=button id="phraseButton" value="Create phrase" onclick="makePhrases()">
+            <br>
+            <input type=button id="phraseButton" value="Paint phrase" onclick="paintPhrases()">
+        </form>
+    </body>
+</html>
